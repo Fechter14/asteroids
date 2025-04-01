@@ -44,6 +44,11 @@ def main():
                 print("Game over!")
                 sys.exit()
 
+            for shot in shots:
+                if CircleShape.collision(asteroid, shot) == True:
+                    asteroid.split()
+                    shot.kill()
+
 
         screen.fill("black")
 
